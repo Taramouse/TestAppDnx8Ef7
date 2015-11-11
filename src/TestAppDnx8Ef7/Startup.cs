@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Builder;
+﻿using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
 using Microsoft.Dnx.Runtime;
 using Microsoft.Framework.Configuration;
 using Microsoft.Framework.DependencyInjection;
 using Microsoft.Framework.Logging;
 using Microsoft.Data.Entity;
-using TestAppDnxEf7.Models;
+using TestAppDnx8Ef7.Models;
 
 namespace TestAppDnx8Ef7
 {
@@ -31,7 +27,7 @@ namespace TestAppDnx8Ef7
         public void ConfigureServices(IServiceCollection services)
         {
             // Nicky: Add BloggingContext as a service for use with depedency injection.
-            var connection = @"Server=(localdb)\mssqllocaldb;Database=TestAppDnx8Ef7;Trusted_Connection=True;";
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=TestAppDnx8Ef71;Trusted_Connection=True;";
 
             services.AddEntityFramework()
                 .AddSqlServer()

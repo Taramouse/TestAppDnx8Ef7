@@ -8,8 +8,8 @@ using TestAppDnx8Ef7.Models;
 namespace TestAppDnx8Ef7.Migrations
 {
     [DbContext(typeof(BloggingContext))]
-    [Migration("20151111164916_MyFirstMigration")]
-    partial class MyFirstMigration
+    [Migration("20151111175138_MyRevisedMigration")]
+    partial class MyRevisedMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
