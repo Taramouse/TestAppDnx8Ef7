@@ -8,6 +8,8 @@ using Microsoft.Dnx.Runtime;
 using Microsoft.Framework.Configuration;
 using Microsoft.Framework.DependencyInjection;
 using Microsoft.Framework.Logging;
+using Microsoft.Data.Entity;
+using TestAppDnxEf7.Models;
 
 namespace TestAppDnx8Ef7
 {
@@ -28,6 +30,13 @@ namespace TestAppDnx8Ef7
         // This method gets called by the runtime.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Nicky: Add BloggingContext as a service for use with depedency injection.
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=TestAppDnx8Ef7;Trusted_Connection=True;";
+
+            services.AddEntityFramework()
+                .AddSqlServer()
+                .AddDbContext<BloggingContext>(options => options.UseSqlServer(connection));
+
             // Add MVC services to the services container.
             services.AddMvc();
 
