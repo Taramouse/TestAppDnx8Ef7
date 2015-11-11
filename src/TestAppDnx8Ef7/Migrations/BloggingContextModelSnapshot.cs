@@ -3,7 +3,7 @@ using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Infrastructure;
 using Microsoft.Data.Entity.Metadata;
 using Microsoft.Data.Entity.Migrations;
-using TestAppDnxEf7.Models;
+using TestAppDnx8Ef7.Models;
 
 namespace TestAppDnx8Ef7.Migrations
 {
@@ -16,7 +16,7 @@ namespace TestAppDnx8Ef7.Migrations
                 .Annotation("ProductVersion", "7.0.0-beta8-15964")
                 .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("TestAppDnxEf7.Models.Blog", b =>
+            modelBuilder.Entity("TestAppDnx8Ef7.Models.Blog", b =>
                 {
                     b.Property<int>("BlogId")
                         .ValueGeneratedOnAdd();
@@ -27,7 +27,7 @@ namespace TestAppDnx8Ef7.Migrations
                     b.HasKey("BlogId");
                 });
 
-            modelBuilder.Entity("TestAppDnxEf7.Models.Post", b =>
+            modelBuilder.Entity("TestAppDnx8Ef7.Models.Post", b =>
                 {
                     b.Property<int>("PostId")
                         .ValueGeneratedOnAdd();
@@ -41,9 +41,9 @@ namespace TestAppDnx8Ef7.Migrations
                     b.HasKey("PostId");
                 });
 
-            modelBuilder.Entity("TestAppDnxEf7.Models.Post", b =>
+            modelBuilder.Entity("TestAppDnx8Ef7.Models.Post", b =>
                 {
-                    b.HasOne("TestAppDnxEf7.Models.Blog")
+                    b.HasOne("TestAppDnx8Ef7.Models.Blog")
                         .WithMany()
                         .ForeignKey("BlogId");
                 });

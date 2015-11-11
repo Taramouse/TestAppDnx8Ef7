@@ -42,6 +42,3 @@ namespace TestAppDnx8Ef7.Controllers
 
     }
 }
-
-    }
-}
