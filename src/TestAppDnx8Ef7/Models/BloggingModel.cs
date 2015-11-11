@@ -1,7 +1,7 @@
 ﻿using Microsoft.Data.Entity;
 using System.Collections.Generic;
 
-namespace TestAppDnxEf7.Models
+namespace TestAppDnx8Ef7.Models
 {
     public class BloggingContext : DbContext
     {
